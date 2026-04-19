@@ -29,7 +29,7 @@ services:
     <<: *vllm-common
     container_name: apj_00
     volumes:
-      - /home/amd/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose/00:/workspace
+      - /home/amd/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose_node2/00:/workspace
       - /home/amd/models:/models
     environment:
       <<: *vllm-env
@@ -41,7 +41,7 @@ services:
     <<: *vllm-common
     container_name: apj_01
     volumes:
-      - /home/amd/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose/01:/workspace
+      - /home/amd/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose_node2/01:/workspace
       - /home/amd/models:/models
     environment:
       <<: *vllm-env
@@ -53,7 +53,7 @@ services:
     <<: *vllm-common
     container_name: apj_02
     volumes:
-      - /home/amd/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose/02:/workspace
+      - /home/amd/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose_node2/02:/workspace
       - /home/amd/models:/models
     environment:
       <<: *vllm-env
@@ -65,7 +65,7 @@ services:
     <<: *vllm-common
     container_name: apj_03
     volumes:
-      - /home/amd/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose/03:/workspace
+      - /home/amd/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose_node2/03:/workspace
       - /home/amd/models:/models
     environment:
       <<: *vllm-env
@@ -77,7 +77,7 @@ services:
     <<: *vllm-common
     container_name: apj_04
     volumes:
-      - /home/amd/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose/04:/workspace
+      - /home/amd/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose_node2/04:/workspace
       - /home/amd/models:/models
     environment:
       <<: *vllm-env
@@ -89,7 +89,7 @@ services:
     <<: *vllm-common
     container_name: apj_05
     volumes:
-      - /home/amd/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose/05:/workspace
+      - /home/amd/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose_node2/05:/workspace
       - /home/amd/models:/models
     environment:
       <<: *vllm-env
@@ -101,7 +101,7 @@ services:
     <<: *vllm-common
     container_name: apj_06
     volumes:
-      - /home/amd/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose/06:/workspace
+      - /home/amd/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose_node2/06:/workspace
       - /home/amd/models:/models
     environment:
       <<: *vllm-env
@@ -113,7 +113,7 @@ services:
     <<: *vllm-common
     container_name: apj_07
     volumes:
-      - /home/amd/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose/07:/workspace
+      - /home/amd/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose_node2/07:/workspace
       - /home/amd/models:/models
     environment:
       <<: *vllm-env
