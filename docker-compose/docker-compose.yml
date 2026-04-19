@@ -2,7 +2,7 @@ x-vllm-env: &vllm-env
   HF_HUB_CACHE: "/models"
 
 x-vllm-common: &vllm-common
-  image: apj_media_01:latest 
+  image: rocm/pytorch-private:vllm_v0.19.0_jupyternb_apj_media
   working_dir: /workspace
   entrypoint:
     - /bin/bash
@@ -10,7 +10,7 @@ x-vllm-common: &vllm-common
     - -lc
     - >-
       jupyter-lab --allow-root --ip 0.0.0.0 --port 8501
-      --notebook-dir=APJ_ROCm_workshop_2026/
+      --notebook-dir=/workspace/APJ_ROCm_workshop_2026/
       --NotebookApp.token='0422'
   restart: unless-stopped
   ipc: host
@@ -31,7 +31,7 @@ services:
     <<: *vllm-common
     container_name: apj_00
     volumes:
-      - /home/seungrok/APJ_media_workshop/00:/workspace
+      - /home/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose/00:/workspace/APJ_ROCm_workshop_2026
       - /home/amd/models:/models
     environment:
       <<: *vllm-env
@@ -43,7 +43,7 @@ services:
     <<: *vllm-common
     container_name: apj_01
     volumes:
-      - /home/seungrok/APJ_media_workshop/01:/workspace
+      - /home/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose/01:/workspace/APJ_ROCm_workshop_2026
       - /home/amd/models:/models
     environment:
       <<: *vllm-env
@@ -55,7 +55,7 @@ services:
     <<: *vllm-common
     container_name: apj_02
     volumes:
-      - /home/seungrok/APJ_media_workshop/02:/workspace
+      - /home/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose/02:/workspace/APJ_ROCm_workshop_2026
       - /home/amd/models:/models
     environment:
       <<: *vllm-env
@@ -67,7 +67,7 @@ services:
     <<: *vllm-common
     container_name: apj_03
     volumes:
-      - /home/seungrok/APJ_media_workshop/03:/workspace
+      - /home/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose/03:/workspace/APJ_ROCm_workshop_2026
       - /home/amd/models:/models
     environment:
       <<: *vllm-env
@@ -79,7 +79,7 @@ services:
     <<: *vllm-common
     container_name: apj_04
     volumes:
-      - /home/seungrok/APJ_media_workshop/04:/workspace
+      - /home/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose/04:/workspace/APJ_ROCm_workshop_2026
       - /home/amd/models:/models
     environment:
       <<: *vllm-env
@@ -91,7 +91,7 @@ services:
     <<: *vllm-common
     container_name: apj_05
     volumes:
-      - /home/seungrok/APJ_media_workshop/05:/workspace
+      - /home/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose/05:/workspace/APJ_ROCm_workshop_2026
       - /home/amd/models:/models
     environment:
       <<: *vllm-env
@@ -103,7 +103,7 @@ services:
     <<: *vllm-common
     container_name: apj_06
     volumes:
-      - /home/seungrok/APJ_media_workshop/06:/workspace
+      - /home/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose/06:/workspace/APJ_ROCm_workshop_2026
       - /home/amd/models:/models
     environment:
       <<: *vllm-env
@@ -115,7 +115,7 @@ services:
     <<: *vllm-common
     container_name: apj_07
     volumes:
-      - /home/seungrok/APJ_media_workshop/07:/workspace
+      - /home/seungrok/APJ_media_workshop/amd-gpu-workshops/docker-compose/07:/workspace/APJ_ROCm_workshop_2026
       - /home/amd/models:/models
     environment:
       <<: *vllm-env
